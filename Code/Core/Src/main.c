@@ -1954,85 +1954,85 @@ void CheckSetUp()
 void HieuUng1()
 {
 		UART_SendCMD(0x03,0x01);
-    SaoBang16(1,2,speed_col,0,num_col);
+    SaoBang16(2,1,speed_col,0,num_col);
 	
-		UART_SendCMD(0x03,14);	
+		UART_SendCMD(0x03,8);	
 		SaoBang8(3,4, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,14);	
-		SaoBang8(2,1, speed_tia,num_col,num_col+num_tia);	
-    //UART_SendCMD(0x03,15);	
-		//NhapNhay(1,5,num_col+4, num_col+11);
-  	
+    
 		CheckSetUp();
 }
 void HieuUng2()
 {
 		UART_SendCMD(0x03,2);
-    SaoBang16(3,4,speed_col,0,num_col);
+    SaoBang16(3,1,speed_col,0,num_col);
 
-		UART_SendCMD(0x03,6);	
-		SaoBang16(4,5, speed_tia,num_col,num_col+num_tia);	
-    //UART_SendCMD(0x03,7);
-		//NhapNhay(2,3,num_col+7, num_col+15);
-		//NhapNhay(6,4,num_col+8, num_col+14);
+		UART_SendCMD(0x03,7);	
+		SaoBang16(4,2, speed_tia,num_col,num_col+num_tia);	
+  	UART_SendCMD(0x03,8);	
+    SaoBang8(6,1, speed_tia,num_col,num_col+num_tia);	
   
-		//NhapNhay(1,5,num_col+9, num_col+13);
 		CheckSetUp();
 }
 void HieuUng3()
 {
-		UART_SendCMD(0x03,4);
-    SaoBang16(5,6,speed_col,0,num_col);
+		UART_SendCMD(0x03,3);
+    SaoBang16(3,6,speed_col,0,num_col);
 
-		UART_SendCMD(0x03,7);	
+		UART_SendCMD(0x03,11);	
 		SaoBang8DoiNoiTiep(5,6,2,3, speed_tia,num_col,num_col+num_tia);	
+    UART_SendCMD(0x03,11);	
+		SaoBang8DoiNoiTiep(1,3,1,6, speed_tia,num_col,num_col+num_tia);	
 		//NhapNhay(2,3,num_col+7, num_col+15);
-    UART_SendCMD(0x03,8);
+    UART_SendCMD(0x03,14);
 		NhapNhay(6,4,num_col+8, num_col+14);
-		NhapNhay(1,5,num_col+9, num_col+13);
+		NhapNhay(2,5,num_col+6, num_col+12);
+    NhapNhay(2,6,num_col+2, num_col+15);
+  	NhapNhay(1,3,num_col+3, num_col+15);
 		CheckSetUp();
 }
 void HieuUng4()
 {
-		UART_SendCMD(0x03,2);
+		UART_SendCMD(0x03,5);
     SaoBang8(1,5,speed_col,0,num_col);
 
-		UART_SendCMD(0x03,15);	
-		SaoBang16(2,3, speed_tia,num_col,num_col+num_tia);	
-		//NhapNhay(2,3,num_col+7, num_col+15);
+		UART_SendCMD(0x03,11);	
+		SaoBang8DoiSongSong(1,5,3,2, speed_tia,num_col,num_col+num_tia);	
+  	UART_SendCMD(0x03,11);	
+		SaoBang8DoiNoiTiep(2,1,3,4, speed_tia,num_col,num_col+num_tia);
+		NhapNhay(2,3,num_col+7, num_col+15);
     UART_SendCMD(0x03,14);
-		NhapNhay(6,4,num_col+10, num_col+18);
+		NhapNhay(6,4,num_col+3, num_col+15);
 		NhapNhay(4,1,num_col+9, num_col+15);
 		CheckSetUp();
 }
 void HieuUng5()
 {
 		UART_SendCMD(0x03,2);
-    SaoBang8(1,5,speed_col,0,num_col);
+    SaoBang8BaNoiTiep(1,5,3,4,speed_col,0,num_col);
 
-		UART_SendCMD(0x03,11);	
+		UART_SendCMD(0x03,12);	
 		SaoBang8DoiSongSong(4,5,5,4, speed_tia,num_col,num_col+num_tia);	
-		SaoBang8DoiSongSong(4,5,5,4, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,15);
+    UART_SendCMD(0x03,12);
+		SaoBang8DoiNoiTiep(1,2,3,4, speed_tia,num_col,num_col+num_tia);	
+  	UART_SendCMD(0x03,11);	
+		SaoBang16(4,2, speed_tia,num_col,num_col+num_tia);
+  
+    UART_SendCMD(0x03,14);
 		NhapNhay(2,3,num_col+7, num_col+15);
-		NhapNhay(6,4,num_col+8, num_col+14);
-		NhapNhay(1,5,num_col+9, num_col+13);
-    NhapNhay(1,5,num_col+15, num_col+20);
+    NhapNhay(2,3,num_col+7, num_col+15);
+    NhapNhay(2,3,num_col+7, num_col+15);
 		CheckSetUp();
 }
 void HieuUng6()
 {
-		UART_SendCMD(0x03,2);
+		UART_SendCMD(0x03,1);
     SaoBang16(2,4,speed_col,0,num_col);
 
-		UART_SendCMD(0x03,11);	
-		SaoBang8DoiSongSong(2,3,4,5, speed_tia,num_col,num_col+num_tia);	
+		UART_SendCMD(0x03,6);	
+		SaoBang8DoiSongSong(2,3,1,5, speed_tia,num_col,num_col+num_tia);	
     UART_SendCMD(0x03,11);
-		SaoBang8(2,5, speed_tia,num_col,num_col+num_tia);
-    //UART_SendCMD(0x03,15);	
-		//NhapNhay(2,3,num_col+7, num_col+15);
-		//NhapNhay(6,4,num_col+8, num_col+14);
-		//NhapNhay(1,5,num_col+9, num_col+13);
+		SaoBang8(1,6, speed_tia,num_col,num_col+num_tia);
+
 		CheckSetUp();
 }
 void HieuUng7()
@@ -2049,12 +2049,13 @@ void HieuUng7()
 		NhapNhay(1,5,num_col+9, num_col+13);
     NhapNhay(5,2,num_col+12, num_col+15);
 		NhapNhay(1,3,num_col+13, num_col+17);
+    UART_SendCMD(0x0E,0);
 		CheckSetUp();
 }
 void HieuUng8()
 {
 		UART_SendCMD(0x03,3);
-    SaoBang16(6,7,speed_col,0,num_col);
+    SaoBang16(1,7,speed_col,0,num_col);
 
 		UART_SendCMD(0x03,10);	
 		SaoBang8DoiNoiTiep(2,3,4,5, speed_tia,num_col,num_col+num_tia);	
@@ -2068,9 +2069,9 @@ void HieuUng9()
 		UART_SendCMD(0x03,5);
     SaoBang8DoiNoiTiep(1,5,3,4,speed_col,0,num_col);
 
-		UART_SendCMD(0x03,14);	
+		UART_SendCMD(0x03,8);	
 		SaoBang8DoiSongSong(2,1,4,3, speed_tia,num_col,num_col+num_tia);	
-		UART_SendCMD(0x03,13);	
+		UART_SendCMD(0x03,7);	
 		SaoBang8DoiSongSong(6,4,2,5, speed_tia,num_col,num_col+num_tia);	
     UART_SendCMD(0x03,12);
 		NhapNhay(2,3,num_col+7, num_col+15);
@@ -2083,14 +2084,16 @@ void HieuUng10()
 		UART_SendCMD(0x03,3);
     SaoBang8(3,2,speed_col,0,num_col);
 
-		UART_SendCMD(0x03,8);	
+		UART_SendCMD(0x03,11);	
 		SaoBang16DoiNoiTiep(5,2,4,5, speed_tia,num_col,num_col+num_tia);
-    UART_SendCMD(0x03,9);
+    UART_SendCMD(0x03,8);
 		SaoBang2(2,1, speed_tia,num_col,num_col+num_tia);	
-    //UART_SendCMD(0x03,15);
+    UART_SendCMD(0x03,14);
 		//NhapNhay(2,3,num_col+7, num_col+15);
 		//NhapNhay(6,4,num_col+8, num_col+14);
-		//NhapNhay(1,5,num_col+9, num_col+13);
+		NhapNhay(1,5,num_col+9, num_col+13);
+    NhapNhay(2,4,num_col+4, num_col+15);
+    NhapNhay(1,3,num_col+9, num_col+14);
 		CheckSetUp();
 }
 void HieuUng11()
@@ -2099,10 +2102,11 @@ void HieuUng11()
     SaoBang8DoiNoiTiep(1,7,3,2,speed_col,0,num_col);
 
 		UART_SendCMD(0x03,9);	
-		SaoBang8(4,3, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,7);
-    MotBongChayNoiTiep(1,speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,13);
+		SaoBang8(4,1, speed_tia,num_col,num_col+num_tia);	
+    UART_SendCMD(0x03,11);
+    SaoBang16(6,2, speed_tia,num_col,num_col+num_tia);
+    UART_SendCMD(0x03,14);
+    MotBongChayNoiTiep(1,20,num_col,num_col+num_tia);	
 		NhapNhay(2,3,num_col+7, num_col+15);
 		NhapNhay(6,4,num_col+8, num_col+20);
 		NhapNhay(1,5,num_col+9, num_col+13);
@@ -2126,16 +2130,16 @@ void HieuUng12()
 }
 void HieuUng13()
 {
-		UART_SendCMD(0x03,3);
+		UART_SendCMD(0x03,1);
     SaoBang4BaNoiTiep(1,2,3,4,speed_col,0,num_col);
 
 		UART_SendCMD(0x03,6);	
 		SaoBang8BaSongSong(2,5,6, speed_tia,num_col,num_col+num_tia);	
     UART_SendCMD(0x03,8);	
 		SaoBang8BaSongSong(3,1,7, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,7);	
+    UART_SendCMD(0x03,12);	
 		SaoBang4BaNoiTiep(4,1,3,5, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,12);
+    UART_SendCMD(0x03,7);
 		NhapNhay(2,3,num_col+7, num_col+15);
 		NhapNhay(6,4,num_col+8, num_col+20);
 		NhapNhay(1,5,num_col+9, num_col+13);
@@ -2148,11 +2152,11 @@ void HieuUng14()
 
 		UART_SendCMD(0x03,10);	
 		SaoBang8DoiSongSong(1,2,3,5, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,14);	
+    UART_SendCMD(0x03,11);	
 		SaoBang8BaSongSong(1,2,3, speed_tia,num_col,num_col+num_tia);	
     UART_SendCMD(0x03,13);	
 		SaoBang4BaNoiTiep(1,2,3,5, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,15);
+    UART_SendCMD(0x03,7);
 		NhapNhay(2,3,num_col+7, num_col+17);
 		NhapNhay(6,4,num_col+8, num_col+19);
 		NhapNhay(1,5,num_col+9, num_col+13);
@@ -2160,7 +2164,7 @@ void HieuUng14()
 }
 void HieuUng15()
 {
-		UART_SendCMD(0x03,1);
+		UART_SendCMD(0x03,5);
     SaoBang16DoiNoiTiep(1,5,3,4,speed_col,0,num_col);
 
 		UART_SendCMD(0x03,7);	
@@ -2168,8 +2172,8 @@ void HieuUng15()
     UART_SendCMD(0x03,9);	
 		SaoBang8DoiNoiTiep(2,5,2,3, speed_tia,num_col,num_col+num_tia);	
     UART_SendCMD(0x03,8);
-    MotBongChayNoiTiep(5, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,12);
+    MotBongChayNoiTiep(5, 20,num_col,num_col+num_tia);	
+    UART_SendCMD(0x03,13);
 		NhapNhay(2,3,num_col+7, num_col+15);
 		NhapNhay(6,3,num_col+10, num_col+20);
 		NhapNhay(2,5,num_col+8, num_col+15);
@@ -2184,10 +2188,12 @@ void HieuUng16()
 		SaoBang8DoiSongSong(1,2,5,4, speed_tia,num_col,num_col+num_tia);	
     UART_SendCMD(0x03,12);	
 		SaoBang2(2,3, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,15);
+    UART_SendCMD(0x03,9);
 		NhapNhay(2,3,num_col+7, num_col+15);
 		NhapNhay(6,4,num_col+8, num_col+11);
 		NhapNhay(1,5,num_col+9, num_col+13);
+    HAL_Delay(500);
+    UART_SendCMD(0x0E,0);
 		CheckSetUp();
 }
 void HieuUng17()
@@ -2214,7 +2220,7 @@ void HieuUng18()
 
 		UART_SendCMD(0x03,6);	
 		SaoBang8BaSongSong(1,2,3, speed_tia-5,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,7);	
+    UART_SendCMD(0x03,15);	
 		SaoBang2NamNoiTiep(3,2,1,5, speed_tia-2,num_col,num_col+num_tia);	
     UART_SendCMD(0x03,8);	
 		SaoBang8BaSongSong(4,5,6, speed_tia,num_col,num_col+num_tia);	
@@ -2231,16 +2237,18 @@ void HieuUng19()
 		UART_SendCMD(0x03,3);
     SaoBang16(1,5,speed_col,0,num_col);
 
-		UART_SendCMD(0x03,8);	
+		UART_SendCMD(0x03,15);	
 		SaoBang2DoiNoiTiep(3,1,2,3, speed_tia,num_col,num_col+num_tia);	
     UART_SendCMD(0x03,12);	
 		SaoBang8(2,3, speed_tia,num_col,num_col+num_tia);	
     UART_SendCMD(0x03,13);	
 		SaoBang8(2,3, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,15);
+    UART_SendCMD(0x03,7);
 		NhapNhay(2,3,num_col+7, num_col+15);
 		NhapNhay(6,4,num_col+8, num_col+11);
 		NhapNhay(1,5,num_col+9, num_col+17);
+    HAL_Delay(500);
+    UART_SendCMD(0x0E,0);
 		CheckSetUp();
 }
 void HieuUng20()
@@ -2265,16 +2273,16 @@ void HieuUng21()
 		UART_SendCMD(0x03,3);
     SaoBang4DoiNoiTiep(1,2,3,5,speed_col,0,num_col);
 
-		UART_SendCMD(0x03,14);	
+		UART_SendCMD(0x03,11);	
 		SaoBang8BaSongSong(1,2,3, speed_tia,num_col,num_col+num_tia);	
     UART_SendCMD(0x03,12);	
 		MotBongChay(5, speed_tia,num_col,num_col+num_tia);	
     UART_SendCMD(0x03,8);
     SaoBang4(2,3, speed_tia,num_col,num_col+num_tia);	
-    //UART_SendCMD(0x03,11);	
-		//NhapNhay(3,5,num_col+7, num_col+19);
-		//NhapNhay(6,4,num_col+5, num_col+20);
-		//NhapNhay(1,2,num_col+2, num_col+15);
+    UART_SendCMD(0x03,13);	
+		NhapNhay(3,5,num_col+7, num_col+19);
+		NhapNhay(6,4,num_col+5, num_col+20);
+		NhapNhay(1,2,num_col+2, num_col+15);
 		CheckSetUp();
 }
 void HieuUng22()
@@ -2282,23 +2290,25 @@ void HieuUng22()
 		UART_SendCMD(0x03,4);
     SaoBang8(2,4,speed_col,0,num_col);
 
-		UART_SendCMD(0x03,6);	
+		UART_SendCMD(0x03,11);	
 		SaoBang8DoiSongSong(1,2,3,5, speed_tia,num_col,num_col+num_tia);	
     UART_SendCMD(0x03,12);	
 		SaoBang8BaSongSong(5,2,3, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,14);	
+    UART_SendCMD(0x03,11);	
 		SaoBang4BaNoiTiep(3,2,3,5, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,13);
+    UART_SendCMD(0x03,7);
     SaoBang2(3,5,speed_tia+30, num_col, num_col+num_tia);
-    UART_SendCMD(0x03,15);
+    UART_SendCMD(0x03,14);
 		NhapNhay(2,4,num_col+7, num_col+11);
 		NhapNhay(6,1,num_col+8, num_col+5);
 		NhapNhay(2,5,num_col+9, num_col+13);
+    HAL_Delay(500);
+    UART_SendCMD(0x0E,0);
 		CheckSetUp();
 }
 void HieuUng23()
 {
-		UART_SendCMD(0x03,1);
+		UART_SendCMD(0x03,5);
     SaoBang16DoiNoiTiep(2,3,4,5,speed_col,0,num_col);
 
 		UART_SendCMD(0x03,7);	
@@ -2311,7 +2321,7 @@ void HieuUng23()
     SaoBang8BaSongSong(5,2,3, speed_tia,num_col,num_col+num_tia);	
     UART_SendCMD(0x03,11);
     SaoBang8BaSongSong(1,2,6, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,13);
+    UART_SendCMD(0x03,15);
     SaoBang2(1,4,speed_tia+30, num_col, num_col+num_tia);
     UART_SendCMD(0x03,14);
 		NhapNhay(2,3,num_col+7, num_col+15);
@@ -2321,22 +2331,22 @@ void HieuUng23()
 }
 void HieuUng24()
 {
-		UART_SendCMD(0x03,2);
+		UART_SendCMD(0x03,5);
     SaoBang8DoiNoiTiep(2,1,2,5,speed_col,0,num_col);
 
-		UART_SendCMD(0x03,14);
+		UART_SendCMD(0x03,15);
     SaoBang2(1,4,speed_tia+10, num_col, num_col+num_tia);
-    UART_SendCMD(0x03,14);	
+    UART_SendCMD(0x03,13);
 		SaoBang8BaSongSong(5,4,1, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,13);	
+  
 		SaoBang8(2,3, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,8);
+    UART_SendCMD(0x03,11);
     SaoBang8BaNoiTiep(5,2,3,4, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,9);
-    SaoBang8DoiNoiTiep(4,1,2,6, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,12);
-    SaoBang16(1,4,speed_tia, num_col, num_col+num_tia);
     UART_SendCMD(0x03,15);
+    SaoBang8DoiNoiTiep(4,1,2,6, speed_tia,num_col,num_col+num_tia);	
+
+    SaoBang16(1,4,speed_tia, num_col, num_col+num_tia);
+    UART_SendCMD(0x03,14);
 		NhapNhay(2,3,num_col+7, num_col+15);
 		NhapNhay(6,4,num_col+8, num_col+13);
 		NhapNhay(1,5,num_col+9, num_col+16);
@@ -2344,20 +2354,19 @@ void HieuUng24()
 }
 void HieuUng25()
 {
-		UART_SendCMD(0x03,3);
-    SaoBang2(2,5,speed_col,0,num_col);
+		UART_SendCMD(0x03,6);
+    SaoBang8(2,5,speed_col,0,num_col);
 
-		UART_SendCMD(0x03,8);
-    SaoBang2NamNoiTiep(1,4,3,5,speed_tia, num_col, num_col+num_tia);
-    UART_SendCMD(0x03,9);	
+		UART_SendCMD(0x03,11);
+    SaoBang2NamNoiTiep(1,4,3,5,speed_tia+20, num_col, num_col+num_tia);
+   
 		SaoBang4DoiNoiTiep(5,4,1,5, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,10);	
-		SaoBang8DoiNoiTiep(2,3,5,1, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,11);
-    SaoBang8BaSongSong(5,2,3, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,13);
-    SaoBang16(2,6, speed_tia,num_col,num_col+num_tia);	
     UART_SendCMD(0x03,15);
+		SaoBang8DoiNoiTiep(2,3,5,1, speed_tia,num_col,num_col+num_tia);	
+    SaoBang8BaSongSong(5,2,3, speed_tia,num_col,num_col+num_tia);	
+    UART_SendCMD(0x03,11);
+    SaoBang16(2,6, speed_tia,num_col,num_col+num_tia);	
+    UART_SendCMD(0x03,14);
     MotBongChay(4,speed_tia, num_col, num_col+num_tia);
     UART_SendCMD(0x03,14);
 		NhapNhay(1,3,num_col+7, num_col+15);
@@ -2365,117 +2374,7 @@ void HieuUng25()
 		NhapNhay(1,4,num_col+9, num_col+16);
 		CheckSetUp();
 }
-void  HieuUng26()
-{
-		UART_SendCMD(0x03,2);
-    SaoBang2NamNoiTiep(6,1,5,2,speed_col,0,num_col);
 
-		UART_SendCMD(0x03,6);
-    SaoBang8DoiNoiTiep(1,4,3,5,speed_tia, num_col, num_col+num_tia);
-    UART_SendCMD(0x03,7);	
-		MotBongChayNoiTiep(5,speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,8);	
-		SaoBang2(2,3,speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,8);
-    SaoBang4BaNoiTiep(5,2,3,4, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,9);
-    SaoBang8BaSongSong(6,5,1, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,7);
-    MotBongChayNoiTiep(2, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,10);
-    SaoBang16(1,4,speed_tia, num_col, num_col+num_tia);
-    UART_SendCMD(0x03,15);
-    SaoBang2(1,4,speed_tia, num_col, num_col+num_tia);
-    UART_SendCMD(0x03,14);
-		NhapNhay(5,4,num_col+15, num_col+7);
-		NhapNhay(1,2,num_col+3, num_col+14);
-		NhapNhay(1,5,num_col+9, num_col+16);
-		CheckSetUp();
-}
-void HieuUng27()
-{
-		UART_SendCMD(0x03,3);
-    SaoBang4BaNoiTiep(6,1,2,5,speed_col,0,num_col);
-
-		UART_SendCMD(0x03,6);
-    SaoBang16(1,5,speed_tia, num_col, num_col+num_tia);
-    UART_SendCMD(0x03,6);	
-		MotBongChayNoiTiep(2, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,12);	
-		SaoBang4(2,3, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,8);
-    SaoBang2DoiNoiTiep(5,2,3,4, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,10);
-    SaoBang8BaSongSong(6,5,1, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,14);
-    SaoBang2(2,6, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,13);
-    SaoBang8(1,4,speed_tia, num_col, num_col+num_tia);
-    UART_SendCMD(0x03,15);
-    SaoBang4BaNoiTiep(1,4,5,3,speed_tia, num_col, num_col+num_tia);
-    UART_SendCMD(0x03,6);
-		NhapNhay(5,2,num_col+15, num_col+3);
-		NhapNhay(1,5,num_col+6, num_col+12);
-		NhapNhay(1,6,num_col+9, num_col+19);
-		CheckSetUp();
-}
-void HieuUng28()
-{
-		UART_SendCMD(0x03,4);
-    SaoBang8DoiNoiTiep(4,1,2,5,speed_col,0,num_col);
-
-		UART_SendCMD(0x03,14);	
-		SaoBang8DoiSongSong(1,2,3,5, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,13);	
-		SaoBang4DoiSongSong(5,2,3,4, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,8);	
-		MotBongChay(3,speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,10);
-    SaoBang2(3,5,speed_tia+10, num_col, num_col+num_tia);
-    UART_SendCMD(0x03,15);
-		NhapNhay(2,3,num_col+7, num_col+15);
-		NhapNhay(6,4,num_col+12, num_col+20);
-		NhapNhay(1,5,num_col+9, num_col+13);
-		CheckSetUp();
-}
-void HieuUng29()
-{
-		UART_SendCMD(0x03,2);
-    SaoBang4(4,5,speed_col,0,num_col);
-
-		UART_SendCMD(0x03,11);	
-		SaoBang2DoiNoiTiep(1,2,3,5, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,13);	
-		SaoBang8(5,3, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,15);	
-		SaoBang2(3,2, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,8);
-    SaoBang2NamNoiTiep(3,2,1,5,speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,14);
-		NhapNhay(2,3,num_col+7, num_col+15);
-		NhapNhay(6,4,num_col+8, num_col+20);
-		NhapNhay(1,5,num_col+9, num_col+13);
-		CheckSetUp();
-}
-void HieuUng30()
-{
-		UART_SendCMD(0x03,4);
-    SaoBang4DoiNoiTiep(2,3,1,5,speed_col,0,num_col);
-
-		UART_SendCMD(0x03,8);	
-		SaoBang8(2,3, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,7);	
-		SaoBang8DoiSongSong(5,2,3,4, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,0x03);	
-		SaoBang8BaNoiTiep(3,2,3,4, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,10);	
-		SaoBang16(1,3, speed_tia,num_col,num_col+num_tia);	
-    UART_SendCMD(0x03,11);
-		NhapNhay(2,1,num_col+7, num_col+15);
-		NhapNhay(5,4,num_col+8, num_col+20);
-		NhapNhay(1,2,num_col+9, num_col+13);
-		CheckSetUp();
-}
 int main(void)
 {
  
@@ -2489,6 +2388,8 @@ int main(void)
   MX_SPI1_Init();
   MX_USART1_UART_Init();
 	HAL_SPI_Transmit_DMA(&hspi1,(uint8_t*)LED,7700);
+  LED_init();
+  
 	Buff[0] = 0x7E; //start
 	Buff[1] = 0xFF; //version
 	Buff[2] = 0x06; //num_data2.
@@ -2498,7 +2399,7 @@ int main(void)
   //Ghi();
   Doc();
   HAL_Delay(2000);  
-  UART_SendCMD(0x06,30);
+  UART_SendCMD(0x06,23);
   while(1)
   {  
     HieuUng1();
@@ -2546,13 +2447,8 @@ int main(void)
     HieuUng23();
     HAL_Delay(700);
     HieuUng24();
+    HAL_Delay(500);
     HieuUng25();
-    HieuUng26();
-    HieuUng27();
-    HieuUng28();
-    HieuUng29();
-    HieuUng20();
-    HieuUng30();
 	}
 }
 
